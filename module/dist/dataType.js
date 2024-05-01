@@ -17,4 +17,4 @@ friendList.push("mahi");
 let friendRole = [2, 5, 5,];
 friendRole.push(1);
 //tuple 
-let user = ['manik', 3, true];
+let users = ['manik', 3, true];
