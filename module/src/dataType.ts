@@ -22,4 +22,4 @@ let friendRole : number[] = [2, 5, 5,];
 friendRole.push(1)
 
 //tuple 
-let user : [string, number, boolean]=['manik', 3 , true]
+let users : [string, number, boolean]=['manik', 3 , true]
