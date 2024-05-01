@@ -4,6 +4,7 @@
 function add(number1, number2) {
     return number1 + number2;
 }
+// add(3,'33')
 // arrow function
 const AddArrow = (num1, num2) => num1 + num2;
 // Object method
