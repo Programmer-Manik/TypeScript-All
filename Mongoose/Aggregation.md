@@ -130,3 +130,21 @@ db.test.aggregate([
 
 
 ])
+
+
+
+
+
+
+
+
+db.orders.aggregate([
+    {
+        $lookup: {
+            from: "text",
+            localField: "userId",
+            foreignField: "_id",
+            as: "Manik"
+        }
+    }
+])

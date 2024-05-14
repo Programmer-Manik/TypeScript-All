@@ -1,6 +1,6 @@
 // Smartest IDE for MongoDB
 
-// https://nosqlbooster.com/downloads Download and install then 
+// https://nosqlbooster.com/downloads Download and install then
 
 // 1 new connection ,2 test Connection, 3 close then ok, 4 save & connect
 
@@ -36,7 +36,7 @@
 
 //**implicit and condition**
 
- `db.test.find({gender:"Male",age:{$gte:10,$lte:20}},{age:1,gender:'Male'}).sort({ age:1 })`
+`db.test.find({gender:"Male",age:{$gte:10,$lte:20}},{age:1,gender:'Male'}).sort({ age:1 })`
 
 //in
 
@@ -94,7 +94,7 @@ age:1`
 
 `}).sort({ age:1 })`
 
-// ex**mplicit** 
+// ex**mplicit**
 
 //**5-5 $and, $or, implicit vs explicit**
 
@@ -155,7 +155,7 @@ interests :  "Gaming"
 },
 )`
 
-//each akadhik add 
+//each akadhik add
 
 `db.test.updateOne(
 {_id : ObjectId("6406ad63fc13ae5a40000065")},
@@ -173,7 +173,7 @@ interests : {$each: ["manik","islam","sakib"]}
 
 `db.test.find({	_id : ObjectId("6406ad63fc13ae5a40000065")})`
 
-//file tow 
+//file tow
 
 //unsent
 
@@ -215,11 +215,11 @@ interests : {$each: ["manik","islam","sakib"]}
 
 //**5-10 More about $set, how to explore documentation**
 
-// onefile 
+// onefile
 
 `db.test.find({	_id : ObjectId("6406ad63fc13ae5a40000065")})`
 
-// tow file 
+// tow file
 
 `db.test.updateOne(
 {_id : ObjectId("6406ad63fc13ae5a40000065"),"education.major":"Art"},
@@ -231,7 +231,7 @@ $set: {
 
 `)`
 
-//age a years kore batare chai 
+//age a years kore batare chai
 
 `db.test.updateOne(
 {_id : ObjectId("6406ad63fc13ae5a40000065")},
