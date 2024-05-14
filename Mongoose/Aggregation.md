@@ -49,3 +49,15 @@ db.test.aggregate([
         },
     }
     ])
+
+
+
+
+
+   db.test.aggregate([
+    {$unwind: "$interests"},
+    {
+    $group: { _id: "$age" , interestsPerAge:{$push: "$interests"}}
+    }
+   
+   ])
