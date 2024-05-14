@@ -61,3 +61,36 @@ db.test.aggregate([
     }
    
    ])
+
+
+
+
+
+
+
+db.test.aggregate([
+    {
+        $bucket: {
+            groupBy: "$age",
+            boundaries: [20, 40, 60, 80,],
+            default: "Other",
+            output: {
+                count: { $sum: 1 },
+                fullDoc: { $push: "$$ROOT" }
+            }
+        }
+    },
+    {
+        $sort: {
+            count: -1,
+        }
+    },
+    {$limit: 2},
+    {
+        $project: {
+                count:1
+        }
+    },
+
+
+])
