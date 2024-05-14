@@ -13,3 +13,15 @@ db.test.aggregate([
     {$merge:"text"}
    
    ])
+
+
+   db.test.aggregate([
+    // {$group: { _id: "$address.country", count:{$sum:1}}},
+    // {$group: { _id: "$address.country", amakDekhawName:{$push: "$name"}, count:{$sum:1} }},
+    {$group: { _id: "$address.country", fullDoc:{$push: "$$ROOT"}, count:{$sum:1} }},
+    {$project: {
+        "fullDoc.name":1,
+        "fullDoc.address":1,
+        "fullDoc.phone":1,
+    }},
+    ])
