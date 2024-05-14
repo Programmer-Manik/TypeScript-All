@@ -94,3 +94,39 @@ db.test.aggregate([
 
 
 ])
+
+
+
+
+
+
+
+
+db.test.aggregate([
+    {
+        $facet: {
+            // pipelineOne
+            "friendsCount": [
+               { $unwind: "$friends" },
+
+               { $group: { _id: "$friends", count: { $sum: 1 } } },
+            ],
+            // pipelineTow
+            "educationCount": [
+                { $unwind: "$education" },
+                {
+                    $group: { _id: "$education", count: { $sum: 1 } }
+                }
+            ],
+            // pipelineTow
+            "skillsCount": [
+                { $unwind: "$skills" },
+                {
+                    $group: { _id: "$skills", count: { $sum: 1 } }
+                }
+            ]
+         }
+   },
+
+
+])
